@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+  color: #333;
+  text-align: center;
+}
+
+.story-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+  color: #c0392b;
+}
+
+.intro {
+  font-size: 1.2rem;
+  margin-bottom: 2em;
+  color: #555;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.date {
+  background: #fff0f5;
+  border: 2px solid #ff5e78;
+  border-radius: 15px;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.date:hover {
+  background: #ff5e78;
+  color: white;
+  transform: scale(1.05);
+}
+
+.event-display {
+  background: #ffe6ea;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 200px;
+  transition: all 0.3s ease;
+}
+
+#event-text {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #d6336c;
+}
+
+#event-img {
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery-button {
+  margin-top: 30px;
+}
+
+.btn-gallery {
+  padding: 12px 25px;
+  background: #e91e63;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn-gallery:hover {
+  background: #c2185b;
+}

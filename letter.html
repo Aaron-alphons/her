@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Letter 💌</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #ffd1dc, #fff0f5);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .letter {
+      max-width: 700px;
+      margin: 10vh auto;
+      font-size: 1.2em;
+      line-height: 1.7;
+      color: #333;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .typewriter-text {
+      white-space: pre-wrap;
+      border-right: 2px solid #333;
+      animation: blink 0.7s infinite;
+      overflow-wrap: break-word;
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: #333; }
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #ff66a3;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #e05590;
+    }
+  </style>
+</head>
+<body>
+  <div class="container letter">
+    <h1>💌 My Letter to You</h1>
+    <p id="typewriter" class="typewriter-text"></p>
+  </div>
+
+  <script>
+    const text = `Hey baby 💖
+
+From the moment we met, I knew something was different... 
+You bring light into my life in ways I never imagined.
+Your smile, your voice, the way you make me laugh — it's magic.✨
+
+Thank you for being you. Thank you for every memory, every laugh, every hug.
+I can’t wait for what’s ahead, because with you... everything feels like a fairytale.💫
+
+I love you — always have, always will. ❤️ 
+
+HAPPY GIRLFRIEND'S DAY ❤️`;
+
+    let i = 0;
+    const speed = 100; // typing speed in milliseconds
+    const typewriter = document.getElementById("typewriter");
+    const btn = document.getElementById("surpriseBtn");
+
+    function typeWriterEffect() {
+      if (i < text.length) {
+        typewriter.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriterEffect, speed);
+      } else {
+        btn.style.display = "inline-block";
+      }
+    }
+
+    window.onload = typeWriterEffect;
+  </script>
+</body>
+</html>

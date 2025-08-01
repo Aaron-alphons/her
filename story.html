@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Love Story 💗</title>
+  <link rel="stylesheet" href="css/story.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="story">
+
+  <div class="story-container">
+    <h1>Our Love Story 💌</h1>
+    <p class="intro">Hover over a date to relive a memory…</p>
+
+    <div class="timeline">
+      <div class="date" data-event="Our first date 🗨️" data-img="images/img1.JPG">Dec 2023</div>
+      <div class="date" data-event="Our moments  🥰" data-img="images/img2.JPG">Mar 2024</div>
+      <div class="date" data-event="Movie date 🌊" data-img="images/img3.JPG">May 2025</div>
+      <div class="date" data-event="That silly fight, but we grew 💪💖" data-img="images/img4.JPG">Jun 2025</div>
+    </div>
+
+    <div class="event-display">
+      <p id="event-text">Hover over a date...</p>
+      <img id="event-img" src="" alt="" style="display:none;">
+    </div>
+
+    <div class="gallery-button">
+      <a href="letter.html" class="btn-gallery">A letter for you</a>
+    </div>
+  </div>
+
+  <script>
+    const dates = document.querySelectorAll('.date');
+    const eventText = document.getElementById('event-text');
+    const eventImg = document.getElementById('event-img');
+
+    dates.forEach(date => {
+      date.addEventListener('mouseover', () => {
+        eventText.textContent = date.getAttribute('data-event');
+        eventImg.src = date.getAttribute('data-img');
+        eventImg.style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
